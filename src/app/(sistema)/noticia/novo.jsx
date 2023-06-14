@@ -87,7 +87,7 @@ export default function TipoCursoNovo() {
 
     useEffect(() => {
         if (modalShow === false) {
-            reset({ nome: '', descricao: '' })
+            reset({ titulo: '', subtitulo: '', data: '', autor: '', texto: '' })
         }
     }, [modalShow, reset]);
 

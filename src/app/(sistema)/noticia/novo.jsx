@@ -30,7 +30,7 @@ const schema = yup.object({
 
 }).required();
 
-export default function TipoCursoNovo() {
+export default function NoticiaNova() {
 
     const messageCallback = useContext(MessageCallbackContext);
 

@@ -1,6 +1,6 @@
 "use client"
 
-import TipoCursoNovo from "./novo";
+import NoticiaNova from "./novo";
 import { Card, Row, Col, Collapse } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
@@ -65,7 +65,7 @@ export default function Page() {
           <h3 className="text-center">Notícias</h3>
         </div>
         {grid}
-        <TipoCursoNovo />
+        <NoticiaNova />
       </div>
     </>
   );

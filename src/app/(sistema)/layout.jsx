@@ -44,6 +44,9 @@ export default function Layout({ children }) {
                             <Link href="/noticia" legacyBehavior passHref>
                                 <Nav.Link>Noticias</Nav.Link>
                             </Link>
+                            <Link href="/usuario" legacyBehavior passHref>
+                                <Nav.Link>Usuários</Nav.Link>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

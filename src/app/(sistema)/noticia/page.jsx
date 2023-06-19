@@ -1,6 +1,7 @@
 "use client"
 
 import NoticiaNova from "./novo";
+import ComentarioNovo from "./comentarioNovo";
 import { Card, Row, Col, Collapse } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
@@ -32,6 +33,7 @@ function MyCard({ p }) {
         <Card.Body>
           <Card.Text>{p.texto}</Card.Text>
         </Card.Body>
+        
       </Collapse>
     </Card>
   );
@@ -66,6 +68,7 @@ export default function Page() {
         </div>
         {grid}
         <NoticiaNova />
+        <ComentarioNovo />
       </div>
     </>
   );

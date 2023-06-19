@@ -96,7 +96,7 @@ export default function ComentarioNovo() {
                         <label className="row mx-2 mt-2">
                             Noticia
                             <input type="number" className="form-control" {...register("noticia")} />
-                            <span className='text-danger'>{errors.autor?.message}</span>
+                            <span className='text-danger'>{errors.noticia?.message}</span>
                         </label>        
 
                         <label className="row mx-2 mt-2">

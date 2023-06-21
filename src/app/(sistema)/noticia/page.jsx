@@ -16,7 +16,13 @@ function MyCard({ p }) {
     setOpen(!open);
   };
 
+  const formatText = (text) => {
+    const lines = text.split('\n');
+    return lines.map((line, index) => <div key={index}>{line}<br/></div>);
+  };
+
   return (
+    <div>
     <Card key={p.id} className="mb-3">
       <Card.Header>
         <Row>
@@ -31,11 +37,14 @@ function MyCard({ p }) {
       </Card.Header>
       <Collapse in={open}>
         <Card.Body>
-          <Card.Text>{p.texto}</Card.Text>
+        <Card.Text>{formatText(p.texto)}</Card.Text>
         </Card.Body>
         
       </Collapse>
+      
     </Card>
+    <ComentarioNovo />
+    </div>
   );
 }
 
@@ -46,6 +55,7 @@ export default function Page() {
   const pesquisar = () => {
     fetch('/api/noticia').then((result) => {
       result.json().then((data) => {
+        data.sort((a, b) => new Date(b.data) - new Date(a.data));
         let finalGrid = data.map((p) => <MyCard key={p.id} p={p} />);
         setGrid(finalGrid);
       });
